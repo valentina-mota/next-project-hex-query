@@ -1,6 +1,6 @@
-# HexQuery: A Tribute to Arcane and Steampunk Culture
+# HexQuery: A Tribute to *Arcane* and Steampunk Culture
 
-HexQuery is a full-stack project celebrating the aesthetics of steampunk and the universe of the animated series *Arcane*. Developed with **Next.js** and **WordPress headless CMS**, it combines a responsive frontend with a scalable backend, offering dynamic content and crafted design.
+HexQuery is a full-stack project celebrating the aesthetics of steampunk and the universe of the animated series *Arcane*. Developed with [**Next.js**](https://nextjs.org/docs) and **WordPress headless CMS**, it combines a responsive frontend with a scalable backend, offering dynamic content and crafted design.
 
 ## Features
 
@@ -13,7 +13,7 @@ HexQuery is a full-stack project celebrating the aesthetics of steampunk and the
   - Buttons link to the `uri` of adjacent posts retrieved from the CMS.
 - **CSS Animations**:
   - SVG path animation using `stroke-dashoffset` for homepage elements.
-  - Flying raven animated with CSS step animations.
+  - Flying raven animated with CSS steps() animation method.
   - Floating and swaying effects for elements like hot air balloons.
 
 ### WordPress as a Headless CMS
@@ -28,14 +28,14 @@ HexQuery is a full-stack project celebrating the aesthetics of steampunk and the
 
 ### Deployment
 - **WordPress Backend**: Hosted on SiteGround for stability and scalability.
-- **Frontend Deployment**: Managed via Netlify, connected to a GitHub repository with Continuous Integration/Continuous Deployment workflows.
+- **Frontend Deployment**: Managed via [Netlify](https://www.netlify.com/), connected to this GitHub repository with Continuous Integration/Continuous Deployment workflows.
 
 ### Visual Assets
 
 The images used in HexQuery were created, generated, and edited using:
 - **Canva**: for layout design and basic image creation.
 - **GIMP**: for advanced photo editing and enhancements.
-- **AI Image Generator**: for generating unique visuals inspired by steampunk and Arcane aesthetics.
+- **AI Image Generator**: for generating unique visuals and characters inspired by steampunk and *Arcane* aesthetics.
 
 ## Live Demo
 
