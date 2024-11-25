@@ -1913,31 +1913,31 @@ code {
             }
     
             74% {
-                transform: translate(74vw, -90px) scale(0.11);
-                opacity: 1
+                transform: translate(74vw, -92px) scale(0.09);
+                opacity: .8
             }
     
             75% {
-                transform: translate(75vw, -90px) scale(0.11);
-                opacity: 1
+                transform: translate(75vw, -94px) scale(0.07);
+                opacity: .6
             }
 
             76% {
-                transform: translate(76vw, -90px) scale(0.11);
-                opacity: .5
+                transform: translate(76vw, -96px) scale(0.05);
+                opacity: .4
             }
 
                 77% {
-                    transform: translate(77vw, -90px) scale(0.11);
-                    opacity: .3
+                    transform: translate(77vw, -98px) scale(0.03);
+                    opacity: .2
                 }
 
                 78% {
-                    transform: translate(78vw, -90px) scale(0.11);
-                    opacity: .1
+                    transform: translate(78vw, -90px) scale(0.01);
+                    opacity: 0
                 }
             79% {
-                transform: translate(79vw, -90px) scale(0.11);
+                transform: translate(79vw, -100px) scale(0.00);
                 opacity: 0
             }
     
