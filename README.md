@@ -40,3 +40,5 @@ The images used in HexQuery were created, generated, and edited using:
 ## Live Demo
 
 Explore the project live at [HexQuery](https://hex-query.netlify.app/)
+
+[Video Preview](https://valentinamota.me/video-preview.mp4)
