@@ -721,13 +721,6 @@ code {
     }
 }
 
-
-/* .raven-container {
-    width: 80%;
-    height: auto;
-} */
-
-
 .raven {
     position: absolute;
     top: 20%;
@@ -939,6 +932,150 @@ code {
 
 @media (max-width: 1024px) {
 
+    .raven {
+            position: absolute;
+            top: 20%;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            opacity: 0;
+        }
+
+    .raven.animate {
+            animation: flying 1s steps(25) infinite, ravenFlight 25s linear forwards;
+        }
+    
+        @keyframes flying {
+    
+            100% {
+                background-position: -7500px, 0;
+            }
+    
+        }
+    
+        @keyframes ravenFlight {
+            0% {
+                transform: translate(0px, -100px) scale(.11);
+                opacity: 0;
+            }
+    
+            1% {
+                transform: translate(1vw, -100px) scale(.08);
+                opacity: 0;
+            }
+    
+            2% {
+                transform: translate(2vw, -100px) scale(.11);
+                opacity: 0;
+            }
+    
+    
+            5% {
+                transform: translate(5vw, -110px) scale(.11);
+                opacity: 0;
+            }
+    
+            8% {
+                transform: translate(8vw, -100px) scale(.11);
+                opacity: .6;
+            }
+    
+            10% {
+    
+                transform: translate(10vw, -90px) scale(.11);
+                opacity: 1;
+            }
+    
+            20% {
+    
+                transform: translate(20vw, -80px) scale(.11);
+                opacity: 1;
+            }
+    
+            25% {
+                transform: translate(25vw, -60px) scale(.09);
+                opacity: 1;
+            }
+    
+            30% {
+                transform: translate(30vw, -60px) scale(.09);
+                opacity: .5;
+            }
+    
+    
+            40% {
+                transform: translate(40vw, -40px) scale(.09);
+                opacity: .3;
+            }
+    
+            42% {
+                transform: translate(42vw, -40px) scale(.09);
+                opacity: .3;
+            }
+    
+            44% {
+                transform: translate(44vw, -50px) scale(.09);
+                opacity: .3;
+            }
+    
+    
+            46% {
+                transform: translate(46vw, -50px) scale(.07);
+                opacity: .2;
+            }
+    
+            50% {
+                transform: translate(50vw, -50px) scale(0.07);
+                opacity: .1;
+    
+            }
+    
+            53% {
+                transform: translate(53vw, -50px) scale(0.07);
+                opacity: 0;
+    
+            }
+    
+            54% {
+                transform: translate(54vw, -50px) scale(0.07);
+                opacity: 0;
+    
+            }
+    
+            55% {
+                transform: translate(55vw, -50px) scale(0.04);
+                opacity: 0;
+    
+            }
+    
+            60% {
+                transform: translate(60vw, -50px) scale(0.00);
+                opacity: 0;
+            }
+    
+            70% {
+                transform: translate(70vw, -120px) scale(0.00);
+                opacity: 0
+            }
+    
+            80% {
+                transform: translate(80vw, -60px) scale(0.00);
+                opacity: 0
+            }
+    
+            90% {
+                transform: translate(90vw, -40px) scale(0.00);
+                opacity: 0
+            }
+    
+            100% {
+                transform: scale(0);
+    
+                opacity: 0
+            }
+    
+        }
+
 /*PAGE ARTICLES*/
 
     #container-post-list {
@@ -1028,6 +1165,16 @@ code {
 
 
     /*RAVEN*/
+
+    .raven {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+
     .raven.animate {
             animation: flying 1s steps(25) infinite, ravenFlight 25s linear forwards;
     }
@@ -1285,6 +1432,14 @@ code {
     }
 
     /*RAVEN*/
+    .raven {
+        position: absolute;
+        top: 40%;
+        left: -30%;
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
 
     .raven.animate {
         animation: flying 1s steps(25) infinite, ravenFlight 15s linearforwards;
@@ -1574,6 +1729,14 @@ code {
         }
 
     /*RAVEN*/
+   .raven {
+       position: absolute;
+       top: 40%;
+       left: -30%;
+       width: 300px;
+       height: 300px;
+       opacity: 0;
+   }
         .raven.animate {
             animation: flying 1s steps(25) infinite, ravenFlight 10s linear forwards 2s;
         }
