@@ -20,6 +20,9 @@ HexQuery is a full-stack project celebrating the aesthetics of steampunk and the
 - **GraphQL Integration**: Content is served via WPGraphQL and API queries.
 - **Dynamic Content Management**:
   - Content is queried dynamically using **Apollo Client**.
+ 
+![HexQuery Preview](https://valentinamota.me/hex-query-preview.png)
+  
 
 ### Responsive Design
 - **Flexible Layout**:
