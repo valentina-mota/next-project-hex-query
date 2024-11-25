@@ -1,0 +1,1866 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --lapis-shade: #0076dc;
+    --heliotrope: #7a1ba6; 
+    --blu-notte: #0A0E2E;
+    --viola-profondo: #2C0735;
+    --verde-petrolio: #0B3D3C;
+    --oro-antico: #D4AF37;
+    --grigio-ferro: #4E5A65;
+    --ciano-luminoso: #3CE7D1;
+    --arancione-ruggine: #C75B12;
+    --lapis-gradient: linear-gradient(90deg,var(--lapis-shade) 0%,var(--heliotrope) 100%);
+    --bs-font-sans-serif: "Open Sans",sans-serif;
+    --eggplant-gradient: linear-gradient(260.85deg,#7e5cef 10.29%,#002838 89.71%);
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+ h2 {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 5rem;
+ }
+
+ p {
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    line-height: 2.4rem;
+ }
+
+ .custom-cursor {
+     position: absolute;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     /* background: #C75B12;
+     background: teal;
+     background: #00FFFF;
+     background: white; */
+     background: rgba(60, 231, 209,.5);
+     z-index: 0;
+     transform: translate(-50%, -50%);
+     mix-blend-mode: difference;
+     pointer-events: none;
+     opacity: 0;
+     animation: fadeInBackground 4s ease forwards;
+ }
+
+ #div-articles {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .8)), url("https://valentinam33.sg-host.com/wp-content/uploads/2024/11/silhouette_1.png");
+    background-position: 0 8%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    animation: fadeInBackground 2s linear forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+ }
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 50px;
+    position: relative;
+    transition: opacity 0.6s ease;
+    z-index: 0;
+}
+
+.navbar.hidden {
+    opacity: 0;
+    pointer-events: none;
+  
+}
+
+.navbar-pointer {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 0, 0, .5);
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+}
+
+.navbar ul {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    right: 0;
+    top: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 0;
+    height: 30vh;
+    width: 100px;
+    gap: 3rem;
+    background: rgba(218, 165, 32, .6);
+    color: black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transform: translateX(100%);
+    transition: 0.3s ease;
+    z-index: inherit;
+}
+
+
+.navbar ul li {
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+label {
+    width: 60px;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.bar {
+    width: 50px;
+    height: 3px;
+    background-color: var(--blu-notte);
+    border-radius: 20px;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.bar-1 {
+    transition: .2s linear;
+}
+
+.bar-2 {
+    width: 40px;
+    transition: .2s linear;
+}
+
+.bar-3 {
+    transition: .2s linear;
+}
+
+.check:checked ~ ul {
+    transform: translateX(0);
+    transition: 0.3s ease;
+}
+
+
+.check:checked~label .bar-1 {
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.check:checked~label .bar-2 {
+    display: none;
+}
+
+.check:checked~label .bar-3 {
+    transform: rotate(-45deg);
+    position: absolute;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+#main-home {
+    height: 100vh;
+    max-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 0;
+    cursor: none;
+    margin-top: 0;
+}
+
+.main.single-post {
+    margin-top: 5rem;
+    width: 48%;
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: none;
+}
+
+#container-post-list {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .8)), url("https://valentinam33.sg-host.com/wp-content/uploads/2024/11/silhouette_1.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 0 0 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInBackground 2s linear forwards;
+    width: 100%;
+    cursor: none;
+    
+}
+
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    background: transparent;
+    font-family: var(--bs-font-sans-serif);
+    font-weight: 400;
+    pointer-events: auto;
+}
+
+footer h3 {
+    font-family: var(--bs-font-sans-serif);
+    font-weight: 400;
+}
+
+
+footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: inline;
+    color: rgba(0, 0, 0, .5);
+    transition: .5s;
+    cursor: pointer;
+}
+
+footer a:hover {
+    color: var(--arancione-ruggine);
+    transition: .5s;
+    letter-spacing: .01rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1.title {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 0;
+}
+
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+    text-decoration: underline;
+}
+
+.title {
+    margin-top: 1.15rem;
+    line-height: 1.15;
+    /* font-size: 4rem; */
+    font-size: clamp(2.5rem, 3vw, 3rem);
+}
+
+.title,
+.description {
+    text-align: center;
+}
+
+.description {
+    line-height: 1;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.siteHeader {
+    width: 100%;
+    padding: 0 0 2rem;
+    color: #000;
+    text-align: center;
+}
+
+.siteHeader .title { 
+    background: none;
+    color: black;
+}
+
+article {
+    min-width: 48%;
+    max-width: 850px;
+    font-size: 1.5rem;
+}
+
+code {
+    background: #fafafa;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+        DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 3rem;
+}
+
+.grid a {
+    cursor: pointer;
+}
+
+.card {
+    width: clamp(200px, 30vw, 300px);
+    height: clamp(100px, 15vw, 120px);
+    margin: clamp(0.5rem, 1vw, 1rem);
+    padding: clamp(1rem, 2vw, 1.5rem);
+    margin: 1rem;
+    flex-basis: 45%;
+    padding: 1.5rem;
+    text-align: left;
+    color: #f4e3c1;
+    text-decoration: none;
+    border: 1px solid #3a2e5d;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    background: linear-gradient(135deg, #1c223c, #5c2e91);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInBackground 3s linear forwards;
+    z-index: 0;
+}
+
+.card:focus,
+.card:active {
+    color: var(--oro-antico);
+    border-color: white;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin: 0 0 1rem 0;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+}
+
+.card p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+
+
+
+.logo {
+    height: 1em;
+}
+
+/*HOMEPAGE*/
+#title-svg {
+    width: 500px;
+    height: 150px;
+}
+
+
+#title-svg path {
+    fill: transparent;
+    stroke: var(--grigio-ferro);
+    stroke-width: 1;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: textAnimation 8s ease-in-out 1 forwards 1s;
+}
+
+
+@keyframes textAnimation {
+    0% {
+        stroke-dashoffset: 200;
+    }
+
+
+    100% {
+        stroke-dashoffset: 0;
+        fill: var(--arancione-ruggine);
+        fill: var(--grigio-ferro)
+    }
+
+}
+
+.frame-container {
+    background-image: url("https://valentinam33.sg-host.com/wp-content/uploads/2024/11/cornice-2.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    transform: scale(2);
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 0;
+    opacity: 0;
+    animation: fadeIn 8s ease forwards, frame-animation 5s ease forwards;
+}
+
+@keyframes frame-animation {
+    0% {
+        transform: scale(2)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+
+}
+
+.frame-container .text,
+.frame-container .text-subtitle {
+    z-index: inherit;
+}
+
+.button-link {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background: transparent;
+    border: 1px solid var(--arancione-ruggine);
+    border-radius: 20px;
+    padding: 6px 10px;
+    z-index: 2;
+    opacity: 0;
+    font-size: 20px;
+    box-shadow: 5px 5px 5px var(--arancione-ruggine);
+    color: var(--grigio-ferro);
+    animation: buttonFadeIn 4s linear forwards;
+    transition: .2s;
+    cursor: pointer;
+}
+
+
+
+.button-clicked {
+    box-shadow: 1px 1px 1px var(--arancione-ruggine);
+    
+}
+
+/* .button-link:hover {
+    box-shadow: 1px 1px 1px var(--arancione-ruggine);
+    transition: .2s;
+} */
+
+
+
+@keyframes buttonFadeIn {
+
+    0%,
+    80% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+/*BALLOON CONTAINER*/
+
+.balloon-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.balloon {
+    position: absolute;
+    width: 6%;
+    height: 12%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: float 10s ease-in-out infinite, sway 5s ease-in-out infinite;
+}
+
+.balloon-1 {
+    background-image: url("https://valentinam33.sg-host.com/wp-content/uploads/2024/11/mongolfiera-1.png");
+    top: 30%;
+    left: 30%;
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards, float 20s ease-in-out infinite 0s, sway 15s ease-in-out infinite 0s;
+
+}
+
+.balloon-2 {
+    background-image: url("https://valentinam33.sg-host.com/wp-content/uploads/2024/11/mongolfiera-2.png");
+    top: 55%;
+    left: 34%;
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards, float 20s ease-in-out infinite 2s, sway 25s ease-in-out infinite 2s;
+}
+
+.balloon-3 {
+    background-image: url("https://valentinam33.sg-host.com/wp-content/uploads/2024/11/mongolfiera-3.png");
+    top: 38%;
+    left: 29%;
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards, float 20s ease-in-out infinite 4s, sway 25s ease-in-out infinite 4s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animazione di fluttuazione */
+@keyframes float {
+
+    /* 0% {
+         transform: translateY(0);
+     }
+
+     50% {
+         transform: translateY(-50px);
+     }
+
+     100% {
+         transform: translateY(0);
+     } */
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-100px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes sway {
+
+    /* 0%,
+     100% {
+         transform: rotate(0deg);
+     }
+
+     50% {
+         transform: rotate(5deg);
+     } */
+    0%,
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateX(-20px) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateX(20px) rotate(5deg);
+    }
+
+    75% {
+        transform: translateX(-10px) rotate(-3deg);
+    }
+}
+
+/*END BALLOON CONTAINER*/
+
+
+.illustration-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+
+
+@keyframes entering {
+
+    from {
+        transform: scale(.5);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+
+.lampade-sinistra,
+.lampade-destra {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    height: auto;
+    opacity: 0;
+}
+
+.lampade-sinistra {
+    width: 60%;
+    left: -30%;
+}
+
+.lampade-destra {
+    width: 50%;
+    left: 80%;
+}
+
+.lampade-sinistra.animate {
+    animation: fadeIn 3s linear forwards, lampade-sinistra-animate 3s ease forwards;
+}
+
+.lampade-destra.animate {
+    animation: fadeIn 3s linear forwards, lampade-destra-animate 3s ease forwards;
+}
+
+@keyframes lampade-sinistra-animate {
+    0% {
+        
+        width: 60%;
+        left: -30%;
+    }
+
+    100% {
+        width: 30%;
+        left: 0;
+    }
+}
+
+@keyframes lampade-destra-animate {
+    0% { 
+        width: 50%;
+        left: 80%;
+    }
+
+    100% {
+        width: 25%;
+        left: 68%;
+    }
+}
+
+
+/* .raven-container {
+    width: 80%;
+    height: auto;
+} */
+
+
+.raven {
+    position: absolute;
+    top: 20%;
+    left: 200px;
+    background: transparent url("https://valentinam33.sg-host.com/wp-content/uploads/2024/11/spritesheet-raven_scaled.png") 0 0 no-repeat;
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+}
+
+.raven.animate {
+    animation: flying 1s steps(25) infinite, ravenFlight 25s linear forwards;
+}
+
+
+
+@keyframes flying {
+
+    100% {
+        background-position: -7500px, 0;
+    }
+
+}
+
+@keyframes ravenFlight {
+    0% {
+        transform: translate(0px, -100px) scale(.11);
+        opacity: 0
+    }
+
+    1% {
+        transform: translate(1vw, -100px) scale(.08);
+        opacity: 0
+    }
+
+    2% {
+        transform: translate(2vw, -100px) scale(.11);
+        opacity: 0
+    }
+
+
+    5% {
+        transform: translate(5vw, -110px) scale(.11);
+        opacity: 0;
+    }
+
+    8% {
+        transform: translate(8vw, -100px) scale(.11);
+        opacity: 1;
+    }
+
+    10% {
+
+        transform: translate(10vw, -90px) scale(.11);
+        opacity: 1;
+    }
+
+    20% {
+
+        transform: translate(20vw, -80px) scale(.11);
+        opacity: 1;
+    }
+
+    25% {
+        transform: translate(25vw, -60px) scale(.09);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translate(30vw, -60px) scale(.09);
+        opacity: 1;
+    }
+
+
+    40% {
+        transform: translate(40vw, -40px) scale(.09);
+        opacity: 1;
+    }
+
+    42% {
+        transform: translate(42vw, -40px) scale(.09);
+        opacity: 1;
+    }
+
+    44% {
+        transform: translate(44vw, -50px) scale(.09);
+        opacity: 1;
+    }
+
+
+    46% {
+        transform: translate(46vw, -50px) scale(.07);
+        opacity: .5;
+    }
+
+    50% {
+        transform: translate(50vw, -50px) scale(0.07);
+        opacity: .3;
+
+    }
+
+    53% {
+        transform: translate(53vw, -50px) scale(0.07);
+        opacity: .2;
+    
+    }
+
+    54% {
+        transform: translate(54vw, -50px) scale(0.07);
+        opacity: .1;
+    
+    }
+
+    55% {
+        transform: translate(55vw, -50px) scale(0.04);
+        opacity: 0;
+
+    }
+
+    60% {
+        transform: translate(60vw, -50px) scale(0.00);
+        opacity: 0;
+    }
+
+    70% {
+        transform: translate(70vw, -120px) scale(0.00);
+        opacity: 0
+    }
+
+    80% {
+        transform: translate(80vw, -60px) scale(0.00);
+        opacity: 0
+    }
+
+    90% {
+        transform: translate(90vw, -40px) scale(0.00);
+        opacity: 0
+    }
+
+    100% {
+        transform: scale(0);
+
+        opacity: 0
+    }
+
+}
+
+/*PAGE ARTICLES*/
+
+.articles-span {
+    font-style: italic;
+}
+
+
+/*PREVIOUS, NEXT*/
+
+.navigation-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline: 6rem;
+    margin-top: 3rem;
+    z-index: 0;
+}
+
+.navigation-buttons .button.previous,
+.navigation-buttons .button.next {
+    text-decoration: none;
+    color: var(--arancione-ruggine);
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.navigation-buttons .button.previous:hover,
+.navigation-buttons .button.next:hover {
+    color: var(--grigio-ferro);
+}
+
+.button.previous {
+    margin-bottom: 20px;
+}
+
+/*KEYFRAMES*/
+
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*MEDIA QUERIES*/
+
+
+@media (max-width: 1440px) {
+    /*PAGE ARTICLES*/
+    main {
+        margin-top: 30px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+
+/*PAGE ARTICLES*/
+
+    #container-post-list {
+        background-image: linear-gradient(45deg, rgba(255, 255,255, .5), rgba(255, 255, 255, .8)), url("https://valentinam33.sg-host.com/wp-content/uploads/2024/11/silhouette_2.png");
+        background-position: left;
+        background-size: cover;
+    }
+
+    main {
+        margin-top: 20px;
+    }
+
+/*PAGE SINGLE POST*/
+    #div-articles {
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, .86), rgba(255, 255, 255, .86)), url("https://valentinam33.sg-host.com/wp-content/uploads/2024/11/silhouette_5.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200vh;
+    }
+
+.navbar ul {
+        background: rgba(218, 165, 32, .8);
+        background: rgba(255, 255, 255, .6);
+        border: 1px solid rgba(128, 128, 128, .6);
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .main.single-post {
+        width: 65%;
+    }
+
+    h1.title {
+        font-size: 2.6rem;
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .custom-cursor {
+        display: none;
+    }
+
+    #main-home {
+        cursor: pointer;
+    }
+
+    .illustration-container {
+        background-image: linear-gradient(rgba(255, 250, 218, 1), rgba(255, 250, 218, .5));
+      
+    }
+
+        #title-svg path {
+            animation: textAnimation 12s ease-in-out 1 forwards 1s;
+        }
+
+                @keyframes textAnimation {
+                    0% {
+                        stroke-dashoffset: 200;
+                    }
+
+                    50% {
+                        fill: transparent;
+                    }
+        
+        
+                    100% {
+                        stroke-dashoffset: 0;
+                        fill: var(--arancione-ruggine);
+                        fill: var(--grigio-ferro)
+                    }
+
+                }
+
+        .frame-container {
+            transform: scale(1);
+            animation: fadeIn 6s ease-in-out forwards 1s;
+            opacity: 0;
+        }
+
+
+    /*RAVEN*/
+    .raven.animate {
+            animation: flying 1s steps(25) infinite, ravenFlight 25s linear forwards;
+    }
+
+        @keyframes flying {
+    
+            100% {
+                background-position: -7500px, 0;
+            }
+    
+        }
+
+    @keyframes ravenFlight {
+            0% {
+                transform: translate(0px, -100px) scale(.11);
+                opacity: 0;
+            }
+    
+            1% {
+                transform: translate(1vw, -100px) scale(.08);
+                opacity: 0;
+            }
+    
+            2% {
+                transform: translate(2vw, -100px) scale(.11);
+                opacity: 0;
+            }
+    
+    
+            5% {
+                transform: translate(5vw, -110px) scale(.11);
+                opacity: 0;
+            }
+    
+            8% {
+                transform: translate(8vw, -100px) scale(.11);
+                opacity: .6;
+            }
+    
+            10% {
+    
+                transform: translate(10vw, -90px) scale(.11);
+                opacity: 1;
+            }
+    
+            20% {
+    
+                transform: translate(20vw, -80px) scale(.11);
+                opacity: 1;
+            }
+    
+            25% {
+                transform: translate(25vw, -60px) scale(.09);
+                opacity: 1;
+            }
+    
+            30% {
+                transform: translate(30vw, -60px) scale(.09);
+                opacity: .5;
+            }
+    
+    
+            40% {
+                transform: translate(40vw, -40px) scale(.09);
+                opacity: .3;
+            }
+    
+            42% {
+                transform: translate(42vw, -40px) scale(.09);
+                opacity: .3;
+            }
+    
+            44% {
+                transform: translate(44vw, -50px) scale(.09);
+                opacity: .3;
+            }
+    
+    
+            46% {
+                transform: translate(46vw, -50px) scale(.07);
+                opacity: .2;
+            }
+    
+            50% {
+                transform: translate(50vw, -50px) scale(0.07);
+                opacity: .1;
+    
+            }
+    
+            53% {
+                transform: translate(53vw, -50px) scale(0.07);
+                opacity: 0;
+    
+            }
+    
+            54% {
+                transform: translate(54vw, -50px) scale(0.07);
+                opacity: 0;
+    
+            }
+    
+            55% {
+                transform: translate(55vw, -50px) scale(0.04);
+                opacity: 0;
+    
+            }
+    
+            60% {
+                transform: translate(60vw, -50px) scale(0.00);
+                opacity: 0;
+            }
+    
+            70% {
+                transform: translate(70vw, -120px) scale(0.00);
+                opacity: 0
+            }
+    
+            80% {
+                transform: translate(80vw, -60px) scale(0.00);
+                opacity: 0
+            }
+    
+            90% {
+                transform: translate(90vw, -40px) scale(0.00);
+                opacity: 0
+            }
+    
+            100% {
+                transform: scale(0);
+    
+                opacity: 0
+            }
+    
+        }
+
+        .lampade-sinistra,
+        .lampade-destra {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            width: 30%;
+            height: auto;
+            opacity: 0;
+            
+        }
+
+        .lampade-sinistra.animate {
+            animation: fadeIn 1s linear forwards 0s;
+         
+        }
+    
+        .lampade-destra.animate {
+            animation: fadeIn 1s linear forwards 0s;
+        }
+
+    /*BALLOON CONTAINER*/
+        .balloon-1 {
+            top: 30%;
+            left: 30%;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards, float 20s ease-in-out infinite 0s, sway 15s ease-in-out infinite 0s;
+        }
+    
+        .balloon-2 {
+            top: 55%;
+            left: 25%;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards, float 20s ease-in-out infinite 2s, sway 25s ease-in-out infinite 2s;
+        }
+    
+        .balloon-3 {
+            top: 34%;
+            left: 20%;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards, float 20s ease-in-out infinite 4s, sway 25s ease-in-out infinite 4s;
+        }
+
+    /*PAGE ARTICLES*/
+    #container-post-list {
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, .8), rgba(255,255, 255, .8)), url("https://valentinam33.sg-host.com/wp-content/uploads/2024/11/silhouette_6.png");
+        background-position: left;
+        background-size: cover;
+        cursor: pointer;
+    }
+
+    #container-post-list h1.title {
+        padding-inline: 20px;
+        margin-bottom: 0;
+    }
+
+    .navbar ul {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-top: 50px;
+        height: 200px;
+        box-shadow: 0px 0px 6px 12px rgba(0, 0, 0, .3);
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-inline-start: 0;
+        border-radius: 0;
+        background: rgba(255, 255, 255, 1);
+        transition: 0.3s ease;
+        z-index: -1;
+        transform: translateY(-200px);
+        transition: 0.8s ease-in-out;
+    }
+
+    .check:checked~ul {
+        transform: translateY(0);
+        transition: 0.8s ease-in-out;
+    }
+
+   
+
+    /*PAGE SINGLE POST*/    
+    .main.single-post {
+        width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1rem;
+        cursor: pointer;
+
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    #div-articles {
+        background-image: linear-gradient(45deg, rgba(255, 255,255, .86), rgba(255, 255, 255, .86)), url("https://valentinam33.sg-host.com/wp-content/uploads/2024/11/silhouette_5.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200vh;
+    }
+
+    .navigation-buttons {
+        padding-inline: 0rem;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    #title-svg {
+        width: 350px;
+        height: 80px;
+    }
+
+    /*RAVEN*/
+
+    .raven.animate {
+        animation: flying 1s steps(25) infinite, ravenFlight 15s linearforwards;
+    }
+
+    @keyframes flying {
+
+        100% {
+            background-position: -7500px, 0;
+        }
+
+    }
+    
+    @keyframes ravenFlight {
+        0% {
+            transform: translate(0px, -100px) scale(.11);
+            opacity: 0;
+        }
+
+        1% {
+            transform: translate(1vw, -100px) scale(.08);
+            opacity: 0;
+        }
+
+        2% {
+            transform: translate(2vw, -100px) scale(.11);
+            opacity: 0;
+        }
+
+
+        5% {
+            transform: translate(5vw, -110px) scale(.11);
+            opacity: 0;
+        }
+
+        8% {
+            transform: translate(8vw, -100px) scale(.11);
+            opacity: .6;
+        }
+
+        10% {
+
+            transform: translate(10vw, -90px) scale(.11);
+            opacity: 1;
+        }
+
+        20% {
+
+            transform: translate(20vw, -80px) scale(.11);
+            opacity: 1;
+        }
+
+        25% {
+            transform: translate(25vw, -60px) scale(.11);
+            opacity: 1;
+        }
+
+        30% {
+            transform: translate(30vw, -60px) scale(.11);
+            opacity: 1;
+        }
+
+
+        40% {
+            transform: translate(40vw, -40px) scale(.11);
+            opacity: 1;
+        }
+
+        42% {
+            transform: translate(42vw, -40px) scale(.11);
+            opacity: 1;
+        }
+
+        44% {
+            transform: translate(44vw, -50px) scale(.09);
+            opacity: 1;
+        }
+
+
+        46% {
+            transform: translate(46vw, -50px) scale(.11);
+            opacity: 1;
+        }
+
+        50% {
+            transform: translate(50vw, -50px) scale(0.11);
+            opacity: 1;
+
+        }
+
+        53% {
+            transform: translate(53vw, -50px) scale(0.11);
+            opacity: 1;
+
+        }
+
+        54% {
+            transform: translate(54vw, -50px) scale(0.11);
+            opacity: 1;
+
+        }
+
+        55% {
+            transform: translate(55vw, -50px) scale(0.11);
+            opacity: 1;
+
+        }
+        56% {
+            transform: translate(56vw, -55px) scale(0.11);
+            opacity: 1;
+        }
+            57% {
+                transform: translate(57vw, -60px) scale(0.11);
+                opacity: 1;
+            }
+        58% {
+            transform: translate(58vw, -60px) scale(0.11);
+            opacity: 1;
+        }
+
+        60% {
+            transform: translate(60vw, -55px) scale(0.11);
+            opacity: 1;
+        }
+        62% {
+            transform: translate(62vw, -60px) scale(0.11);
+            opacity: 1;
+        }
+        63% {
+            transform: translate(63vw, -65px) scale(0.11);
+            opacity: 1;
+        }
+        64% {
+            transform: translate(64vw, -70px) scale(0.11);
+            opacity: 1;
+        }
+        65% {
+            transform: translate(65vw, -75px) scale(0.11);
+            opacity: 1;
+        }
+
+        70% {
+            transform: translate(70vw, -80px) scale(0.10);
+            opacity: .9
+        }
+        71% {
+            transform: translate(71vw, -80px) scale(0.09);
+            opacity: .8
+        }
+        72% {
+            transform: translate(72vw, -80px) scale(0.08);
+            opacity: .7
+        }
+        73% {
+            transform: translate(73vw, -80px) scale(0.07);
+            opacity: .6
+        }
+             74% {
+                 transform: translate(74vw, -80px) scale(0.06);
+                 opacity: .5
+             }
+        75% {
+            transform: translate(75vw, -80px) scale(0.05);
+            opacity: .4
+        }
+
+        80% {
+            transform: translate(80vw, -85px) scale(0.04);
+            opacity: .3
+        }
+
+        90% {
+            transform: translate(90vw, -80px) scale(0.0);
+            opacity: 0
+        }
+
+        100% {
+            transform: scale(0);
+
+            opacity: 0
+        }
+
+    }
+    
+    .lampade-sinistra,
+    .lampade-destra {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        width: 40%;
+        height: auto;
+        opacity: 0;
+    }
+
+    .lampade-sinistra {
+        left: -7%;
+        bottom: auto;
+        right: auto;
+    }
+    .lampade-destra {
+        right: auto;
+        left: 61%;
+        bottom: auto;
+        right: auto;
+    }
+
+   /*BALLOON CONTAINER*/
+   .balloon-1 {
+       top: 31%;
+       left: 26%;
+       opacity: 0;
+       animation: fadeIn 3s ease-in-out forwards, float 20s ease-in-out infinite 0s, sway 15s ease-in-out infinite 0s;
+   }
+
+   .balloon-2 {
+       top: 48%;
+       left: 25%;
+       opacity: 0;
+       animation: fadeIn 3s ease-in-out forwards, float 20s ease-in-out infinite 2s, sway 25s ease-in-out infinite 2s;
+   }
+
+   .balloon-3 {
+       top: 34%;
+       left: 20%;
+       opacity: 0;
+       animation: fadeIn 3s ease-in-out forwards, float 20s ease-in-out infinite 4s, sway 25s ease-in-out infinite 4s;
+   }
+
+    /*PAGE ARTICLES*/
+    #container-post-list {
+        background-image: linear-gradient( rgba(255, 255, 255, .7) 10%, rgba(255,255, 255, .9)), url("https://valentinam33.sg-host.com/wp-content/uploads/2024/11/silhouette_4.png");
+        background-position: center;
+        background-size: 200vh;
+    }
+
+    h1.title {
+        font-size: 2.5rem;
+    }
+
+    #container-post-list h1.title {
+        padding-inline: 20px;
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+
+                
+    .card {
+        flex-basis: 60%;
+    }
+
+    /*END PAGE ARTICLES*/
+
+    .navbar ul li {
+        font-size: 1.4rem;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    #div-articles {
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, .86), rgba(255, 255, 255, .86)), url("https://valentinam33.sg-host.com/wp-content/uploads/2024/11/silhouette_3.png");
+            background-position: center;
+            background-size: cover;
+        }
+
+    h2 {
+        font-size: 1.7rem;
+        line-height: 2.3rem;
+        margin-bottom: 2.3rem;
+    }
+
+    footer {
+        text-align: center;
+        line-height: 1.5rem;
+    }    
+
+    footer h3 {
+        font-size: 16px;
+    }
+  
+}
+
+@media (max-width: 375px) and (max-height: 667px) {
+
+    #title-svg {
+            width: 300px;
+            height: 70px;
+        }
+
+    /*RAVEN*/
+        .raven.animate {
+            animation: flying 1s steps(25) infinite, ravenFlight 10s linear forwards 2s;
+        }
+    
+        @keyframes flying {
+    
+            100% {
+                background-position: -7500px, 0;
+            }
+    
+        }
+    
+        @keyframes ravenFlight {
+            0% {
+                transform: translate(0px, -90px) scale(.11);
+                opacity: 0;
+            }
+    
+            1% {
+                transform: translate(1vw, -90px) scale(.08);
+                opacity: 0;
+            }
+    
+            2% {
+                transform: translate(2vw, -90px) scale(.11);
+                opacity: 0;
+            }
+    
+    
+            5% {
+                transform: translate(5vw, -90px) scale(.11);
+                opacity: 0;
+            }
+    
+            8% {
+                transform: translate(8vw, -90px) scale(.11);
+                opacity: .6;
+            }
+    
+            10% {
+    
+                transform: translate(10vw, -90px) scale(.11);
+                opacity: 1;
+            }
+    
+            20% {
+    
+                transform: translate(20vw, -90px) scale(.11);
+                opacity: 1;
+            }
+    
+            25% {
+                transform: translate(25vw, -90px) scale(.11);
+                opacity: 1;
+            }
+    
+            30% {
+                transform: translate(30vw, -90px) scale(.11);
+                opacity: 1;
+            }
+    
+    
+            40% {
+                transform: translate(40vw, -90px) scale(.11);
+                opacity: 1;
+            }
+    
+            42% {
+                transform: translate(42vw, -90px) scale(.11);
+                opacity: 1;
+            }
+    
+            44% {
+                transform: translate(44vw, -90px) scale(.09);
+                opacity: 1;
+            }
+    
+    
+            46% {
+                transform: translate(46vw, -90px) scale(.11);
+                opacity: 1;
+            }
+    
+            50% {
+                transform: translate(50vw, -90px) scale(0.11);
+                opacity: 1;
+    
+            }
+    
+            53% {
+                transform: translate(53vw, -90px) scale(0.11);
+                opacity: 1;
+    
+            }
+    
+            54% {
+                transform: translate(54vw, -90px) scale(0.11);
+                opacity: 1;
+    
+            }
+    
+            55% {
+                transform: translate(55vw, -90px) scale(0.11);
+                opacity: 1;
+    
+            }
+    
+            56% {
+                transform: translate(56vw, -90px) scale(0.11);
+                opacity: 1;
+    
+            }
+    
+            57% {
+                transform: translate(57vw, -90px) scale(0.11);
+                opacity: 1;
+            }
+    
+            58% {
+                transform: translate(58vw, -90px) scale(0.11);
+                opacity: 1;
+            }
+    
+            60% {
+                transform: translate(60vw, -90px) scale(0.11);
+                opacity: 1;
+            }
+    
+            62% {
+                transform: translate(62vw, -90px) scale(0.11);
+                opacity: 1;
+            }
+    
+            63% {
+                transform: translate(63vw, -90px) scale(0.11);
+                opacity: 1;
+            }
+    
+            64% {
+                transform: translate(64vw, -90px) scale(0.11);
+                opacity: 1;
+            }
+    
+            65% {
+                transform: translate(65vw, -90px) scale(0.11);
+                opacity: 1;
+            }
+    
+            70% {
+                transform: translate(70vw, -90px) scale(0.11);
+                opacity: 1
+            }
+    
+            71% {
+                transform: translate(71vw, -90px) scale(0.11);
+                opacity: 1
+            }
+    
+            72% {
+                transform: translate(72vw, -90px) scale(0.08);
+                opacity: 1
+            }
+    
+            73% {
+                transform: translate(73vw, -90px) scale(0.11);
+                opacity: 1
+            }
+    
+            74% {
+                transform: translate(74vw, -90px) scale(0.11);
+                opacity: 1
+            }
+    
+            75% {
+                transform: translate(75vw, -90px) scale(0.11);
+                opacity: 1
+            }
+
+            76% {
+                transform: translate(76vw, -90px) scale(0.11);
+                opacity: 1
+            }
+
+                77% {
+                    transform: translate(77vw, -90px) scale(0.11);
+                    opacity: .5
+                }
+
+                78% {
+                    transform: translate(78vw, -90px) scale(0.11);
+                    opacity: .3
+                }
+            79% {
+                transform: translate(79vw, -90px) scale(0.11);
+                opacity: .1
+            }
+    
+            80% {
+                transform: translate(80vw, -90px) scale(0.11);
+                opacity: 0
+            }
+
+            82% {
+                transform: translate(82vw, -90px) scale(0.11);
+                opacity: 0
+            }
+    
+            90% {
+                transform: translate(90vw, -90px) scale(0.0);
+                opacity: 0
+            }
+    
+            100% {
+                transform: scale(0);
+    
+                opacity: 0
+            }
+    
+        }
+
+    /*PAGE ARTICLES*/
+        #container-post-list {
+            background-image: linear-gradient(rgba(255, 255, 255, .7) 10%, rgba(255, 255, 255, .9)), url("https://valentinam33.sg-host.com/wp-content/uploads/2024/11/silhouette_4.png");
+            background-position: center;
+            background-size: cover;
+        }
+    
+        h1.title {
+            font-size: 2.1rem;
+            margin-bottom: 25px;
+        }
+    
+        #container-post-list h1.title {
+            padding-inline: 0;
+            margin-top: 40px;
+            margin-bottom: 0;
+        }
+
+        .card {
+            flex-basis: 70% !important;
+        }
+                
+    #div-articles {
+        background-image: linear-gradient(rgba(255, 255,255, .9) 10%, rgba(255, 255, 255, .9)), url("https://valentinam33.sg-host.com/wp-content/uploads/2024/11/silhouette_5.png");
+        background-size: 300vh;
+        background-position: center;
+    } 
+
+    .main.single-post {
+        padding-left: 1rem;
+    
+    }
+
+    h2 {
+        font-size: 1.7rem;
+        line-height: 2.3rem;
+        margin-bottom: 2.3rem;
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        line-height: 1.5rem;
+    }
+
+    footer h3 {
+        font-size: 16px;
+    }
+
+}
+
+
+@media (max-width: 320px) {
+  
+    h1.title {
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+        }
+
+    footer h3 {
+        font-size: 15px;
+    }
+}
