@@ -1315,10 +1315,17 @@ code {
             position: absolute;
             z-index: 2;
             top: 0;
-            width: 30%;
             height: auto;
-            opacity: 0;
-            
+            opacity: 0;  
+        }
+
+        .lampade-sinistra {
+            width: 30%;
+            left: 0;
+        }
+        .lampade-destra {
+            width: 25%;
+            left: 68%;
         }
 
         .lampade-sinistra.animate {
@@ -1917,21 +1924,21 @@ code {
 
             76% {
                 transform: translate(76vw, -90px) scale(0.11);
-                opacity: 1
+                opacity: .5
             }
 
                 77% {
                     transform: translate(77vw, -90px) scale(0.11);
-                    opacity: .5
+                    opacity: .3
                 }
 
                 78% {
                     transform: translate(78vw, -90px) scale(0.11);
-                    opacity: .3
+                    opacity: .1
                 }
             79% {
                 transform: translate(79vw, -90px) scale(0.11);
-                opacity: .1
+                opacity: 0
             }
     
             80% {
