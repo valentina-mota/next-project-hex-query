@@ -21,9 +21,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
-
-
- h2 {
+h2 {
     font-family: 'Times New Roman', Times, serif;
     line-height: 5rem;
  }
@@ -44,7 +42,7 @@ body {
      background: teal;
      background: #00FFFF;
      background: white; */
-     background: rgba(60, 231, 209,.5);
+     background: rgba(60, 231, 209,.3);
      z-index: 0;
      transform: translate(-50%, -50%);
      mix-blend-mode: difference;
