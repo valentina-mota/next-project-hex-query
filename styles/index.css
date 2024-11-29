@@ -1756,41 +1756,6 @@ code {
     }
 }
 
-@media (max-width: 412px) and (max-height: 915px) {
-
-    /*Samsung Galaxy S20 Ultra*/
-    #title-svg {
-        width: 340px;
-        height: 100px;
-    }
-
-    #container-post-list {
-        background-size: cover;
-    }
-
-
-
-    .card {
-        padding: 0.5rem;
-    }
-
-    /*BALLOONS*/
-    .balloon-1 {
-        top: 35%;
-        left: 30%;
-    }
-
-    .balloon-2 {
-        top: 45%;
-        left: 34%;
-    }
-
-    .balloon-3 {
-        top: 48%;
-        left: 29%;
-    }
-}
-
 @media (max-width: 375px) and (max-height: 667px) {
 
     #title-svg {
