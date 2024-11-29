@@ -1,40 +1,47 @@
-## HexQuery: A Tribute to Arcane and Steampunk Culture
+# HexQuery: A Tribute to *Arcane* and Steampunk Culture
 
-HexQuery is a full-stack project developed with **Next.js** and **WordPress headless CMS**, combining a highly responsive frontend with a scalable backend. The website explores themes of steampunk aesthetics and the animated series *Arcane*, offering dynamic content and a carefully crafted design.
+HexQuery is a full-stack project celebrating the aesthetics of steampunk and the universe of the animated series *Arcane*. Developed with [**Next.js**](https://nextjs.org/docs) and **WordPress headless CMS**, it combines a responsive frontend with a scalable backend, offering dynamic content and crafted design.
 
-### Technical Features
+## Features
 
-- **Frontend with Next.js**: 
-  - Dynamic page generation using [Dynamic Routes](https://nextjs.org/docs/routing/dynamic-routes) and static rendering with `getStaticProps` and `getStaticPaths`.
-  - Advanced **CSS animations** for an engaging user experience:
-    - The **HexQuery** animated element on the homepage uses an **SVG path animation** leveraging the `stroke-dashoffset` property.
-    - Animated sprites to represent a flying raven, built with the CSS **step animation** technique.
-    - Floating and swaying animations for elements like hot air balloons.
+### Frontend with Next.js
+- **Dynamic Page Generation**:
+  - Uses `getStaticPaths` to dynamically generate paths for each post retrieved via GraphQL.
+  - Implements `getStaticProps` to fetch individual post data and navigation information (previous and next posts) at build time.
+- **Post Navigation**:
+  - Dynamically hides the **PREVIOUS** button on the first post and the **NEXT** button on the last post.
+  - Buttons link to the `uri` of adjacent posts retrieved from the CMS.
+- **CSS Animations**:
+  - SVG path animation using `stroke-dashoffset` for homepage elements.
+  - Flying raven animated with CSS steps() animation method.
+  - Floating and swaying effects for elements like hot air balloons.
 
-- **WordPress Headless CMS**:
-  - Integration of **WPGraphQL** to expose content via GraphQL APIs.
-  - Initial data import using a `.xml` file exported from WordPress.
-  - Dynamic content querying with Apollo Client.
+### WordPress as a Headless CMS
+- **GraphQL Integration**: Content is served via WPGraphQL and API queries.
+- **Dynamic Content Management**:
+  - Content is queried dynamically using **Apollo Client**.
+ 
+![HexQuery Preview](https://valentinamota.me/hex-query-preview.png)
+  
 
-- **Advanced Post Navigation**:
-  - **PREVIOUS** and **NEXT** buttons added for seamless navigation between posts, based on the post order retrieved from the CMS.
-  - Implemented logic to:
-    - Hide the **PREVIOUS** button on the first post.
-    - Hide the **NEXT** button on the last post.
-    - Dynamically link the buttons to the `uri` of the next or previous post.
+### Responsive Design
+- **Flexible Layout**:
+  - Built using media queries for adaptability across devices.
+  - Background images are replaced dynamically with different versions optimized for different small screens.
 
-- **Interactive Navbar**:
-  - A hamburger icon with CSS animations allows opening and closing of the navigation menu.
-  - The menu is managed using a **hidden checkbox-based system**, avoiding additional JavaScript complexity.
+### Deployment
+- **WordPress Backend**: Hosted on SiteGround for stability and scalability.
+- **Frontend Deployment**: Managed via [Netlify](https://www.netlify.com/), connected to this GitHub repository with Continuous Integration/Continuous Deployment workflows.
 
-- **Responsive Design**:
-  - Layout created with **clamp()** units and **media queries** to adapt to various screen sizes.
-  - Dynamic removal of background images on smaller devices for optimized performance.
+### Visual Assets
 
-- **Deployment**:
-  - The WordPress backend is hosted on **SiteGround** to ensure stability and scalability.
-  - The frontend is deployed via **Netlify**, connected to a GitHub repository for continuous updates and streamlined management.
+The images used in HexQuery were created, generated, and edited using:
+- **Canva**: for layout design and basic image creation.
+- **GIMP**: for advanced photo editing and enhancements.
+- **AI Image Generator**: for generating unique visuals and characters inspired by steampunk and *Arcane* aesthetics.
 
-### Conclusion
+## Live Demo
 
-HexQuery showcases advanced full-stack development skills, combining modern technologies like **Next.js**, **WordPress headless CMS**, and **Apollo Client** with visually appealing design and dynamic functionalities. Each post is enriched with a dedicated layout, thematic animations, and intuitive navigation buttons, creating a seamless and engaging user experience.
+Explore the project live at [HexQuery](https://hex-query.netlify.app/)
+
+[Video Preview](https://valentinamota.me/video-preview.mp4)
