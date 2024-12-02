@@ -33,6 +33,11 @@ h2 {
     line-height: 2.4rem;
  }
 
+ .wp-block-list {
+     padding-left: 2rem;
+     padding-bottom: 1rem;
+ }
+
  .wp-block-list li  {
     font-size: 1.3rem;
     line-height: 2.4rem;
